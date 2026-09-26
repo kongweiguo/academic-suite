@@ -1,0 +1,4 @@
+interface:
+  display_name: "学术文献套件"
+  short_description: "统一编排学术文献命名、全文翻译与论文精读，支持阶段选择和断点续作"
+  default_prompt: "使用 $academic-suite 为这篇论文完成统一命名、全文翻译和精读，并整理成果位置与阶段进度。"
