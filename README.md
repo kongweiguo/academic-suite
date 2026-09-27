@@ -72,6 +72,8 @@ git clone --branch master https://github.com/kongweiguo/academic-suite.git "$HOM
 
 `$academic-suite` 仅是支持该语法的宿主中的可选调用方式。
 
+阅读时从“论文索引”找到完整题名，再点击原文、翻译或精读入口；进入译文或精读后，可通过开头导航切换同篇文档。共享编号帮助目录排序，索引和导航帮助直接访问，不需要靠比对三个长文件名寻找关联。
+
 默认先由 rename 核实可复用的同源同版本编号或按当前目录取号、确定实际源名和已核实基本名 `B`，再独立完成翻译和精读；精读以原文为依据。编号以 rename 的[共享编号与目录取号](https://github.com/kongweiguo/academic-rename/blob/master/references/naming.md#共享编号与目录取号)为准，类型识别与基本名提取以其[唯一命名规范](https://github.com/kongweiguo/academic-rename/blob/master/references/naming.md#类型前缀与基本名)为准。Suite 传递实际父目录路径或在线父容器 ID（`scope_location`）、实际编号、源稳定身份、版本与真实成果，不自行编号或从实际源名重新拼接标签。
 
 以核实的 `P001` 为例，新命名形式为 `[P001][原文]B.pdf`（保留真实扩展名）；本地完整成果为 `[P001][翻译]B/[P001][翻译]B.md`、`[P001][精读]B/[P001][精读]B.md`，在线成果使用对应的编号与类型名称。具体输出结构由专业技能提供；两项成果本地放在源旁或指定位置，在线放在原文实际父级或承载容器内。选择保留源名时原文名称不变，普通内容任务取号不启动 CCF 查询或改源。原文未编号或只读时，也可核实复用实际成果名中的编号。
@@ -84,9 +86,9 @@ git clone --branch master https://github.com/kongweiguo/academic-suite.git "$HOM
 
 ## 更新与旧版迁移
 
-本次发布将四仓库统一为 `master`，每仓从一个新的 `Initial commit` 开始。持有旧 `main` 或旧历史克隆时，先把个人修改保存在仓库外，将旧安装目录移出技能发现范围，再按安装步骤重新克隆。按文件人工迁入所需改动，不合并或推回旧提交历史；新版本确认可用后可移除旧副本。
+四仓库此前已统一为 `master`，各自从新的 `Initial commit` 开始，后续功能更新以普通提交发布。本次更新无需再次重建历史。只有仍持有重建前的旧 `main` 或旧历史克隆时，才先把个人修改保存在仓库外，将旧安装目录移出技能发现范围，再重新克隆；按文件迁入所需改动，不合并或推回旧提交历史。
 
-在这次重建后的克隆上，常规更新前保留本地修改，然后运行以下命令；macOS、Linux 和 PowerShell 均可使用：
+在历史重建后的克隆上，常规更新前保留本地修改，然后运行以下命令；macOS、Linux 和 PowerShell 均可使用：
 
 ```sh
 git -C "$HOME/.agents/skills/academic-rename" pull --ff-only origin master
